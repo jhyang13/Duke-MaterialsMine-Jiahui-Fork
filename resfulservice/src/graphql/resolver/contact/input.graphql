@@ -1,0 +1,118 @@
+"""
+Input schema for fetching a single contact
+"""
+input userContactQueryInput {
+  """
+  email of user whose contact to fetch.
+  This field is a required field for fetching all contacts made by a user.
+  """
+  email: String!
+}
+
+"""
+Date and time input filter options
+"""
+input CreatedBetween {
+  from: String!
+  to: String!
+}
+
+"""
+Input schema for for fetching a list of contacts.
+Contains pagination options for how the contacts should be grouped
+"""
+input contactsQueryInput {
+  """
+  Pagination option for the page of contacts to display to return.
+  This defaults to 1 if no value is specified.
+  The contacts are grouped into pages based on the specified pageSize(defaults to 20, if not specified)
+  """
+  pageNumber: Int
+
+  """
+  Date and time input filter options
+  """
+  datetime: CreatedBetween
+
+  """
+  Number of contacts per page.
+  Pagination option for specifying how the server should group the contacts.
+  Defaults to 1 if none is specified.
+  """
+  pageSize: Int
+
+  """
+  Boolean value to specify if to return resolved contact enquiries
+  """
+  resolved: Boolean
+
+  """
+  Name of the admin user who resolved the enquiry
+  """
+  resolvedBy: String
+}
+
+"""
+Input payload for submitting new contact inquiry
+"""
+input createContactInput {
+  """
+  Full name of the user requesting contact
+  """
+  fullName: String!
+
+  """
+  Email address of the user requesting contact
+  """
+  email: String!
+
+  """
+  Purpose for requesting contact.
+  You can specify only one from the list of enumerable values defined
+  """
+  purpose: Purpose!
+
+  """
+  Details of the reason or purpose for requesting contact
+  """
+  message: String!
+
+  """
+  List of uploaded files attachments neccessary for resolving the contact
+  """
+  attachments: [String]
+}
+
+input updateContactInput {
+  """
+  Id of the contact to update
+  """
+  contactId: ID!
+
+  """
+  Boolean value to either resolve or unresolve a contact enquiry
+  """
+  resolved: Boolean
+
+  """
+  Response text sent back to the user who made an enquiry
+  """
+  response: String
+}
+
+"""
+List of enumerable values selectable as purpose for requesting contact
+"""
+enum Purpose {
+  "I want to ask a question"
+  QUESTION
+
+  "I want to submit a ticket"
+  TICKET
+
+  "I have to make a suggestion"
+  SUGGESTION
+
+  "I want to make a comment"
+  COMMENT
+}

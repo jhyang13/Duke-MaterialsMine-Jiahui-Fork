@@ -1,0 +1,33 @@
+type Query {
+  user(input: userIdInput!): User!
+  users(input: usersQueryInput): Users!
+  verifyUser: VerifyUser!
+  getUserContacts(input: userContactQueryInput!): Contacts!
+  contacts(input: contactsQueryInput): Contacts!
+  images(input: imageQueryInput): Images!
+  searchImages(input: imageExplorerInput!): Images!
+  getSingleImages(input: singleImageQueryInput!): Images!
+  getUserDataset(input: datasetStatusInput): UserDataset!
+  getFilesets(input: filesetQueryInput!): Filesets!
+  pixelData(input: pixelDataQueryInput!): PixelatedData!
+  getXlsxCurationList(input: materialQueryInput): MaterialTemplates!
+  xmlFinder(input: xmlFinderInput): XmlDataList!
+  xmlViewer(input: xmlViewerInput): ReadXml!
+  loadComment(input: loadCommentInput!): Comments!
+}
+
+type Mutation {
+  createAPIAccess(input: createAPIAccessInput): ApiAccess!
+  updateUser(input: updateUserInput): User!
+  deleteUser(input: deleteUsersInput): Boolean!
+  submitContact(input: createContactInput!): Contact!
+  createDataset(input: datasetInput): CreatedDataset!
+  createXlsxCurationList(input: materialsInput): MaterialColumns!
+  updateXlsxCurationList(input: columnsInput): Column!
+  updateContact(input: updateContactInput!): Contact!
+  deleteXlsxCurationList(input: materialFieldInput): Column! 
+  postComment(input: postCommentInput): Comment!
+  editComment(input: editCommentInput!): Comment!
+  parseTemplateSheet: SuccessMessage!
+  createDatasetId: Datasets!
+}
