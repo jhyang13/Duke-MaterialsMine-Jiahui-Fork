@@ -1,7 +1,9 @@
 ![](https://github.com/Duke-MatSci/materialsmine/workflows/CI/badge.svg?branch=develop&event=push)
 
+
 # materialsmine
 MaterialsMine App
+
 
 # MaterialsMine_Jiahui
 yaml_converter App
@@ -11,6 +13,11 @@ yaml_converter App
 **Python Code Link:** https://github.com/jhyang13/MaterialsMine_YAMLconvert
 
 **App Link:** https://github.com/jhyang13/MaterialsMine_Jiahui/tree/main/services/app/yaml_converter
+
+**Sample XML Fetch Code Link:** https://github.com/jhyang13/MaterialsMine_Jiahui/blob/main/services/app/yaml_converter/fetch_routes.py
+
+**YAML Converter Code Link:** https://github.com/jhyang13/MaterialsMine_Jiahui/blob/main/services/app/yaml_converter/routes.py
+
 
 ## Usage Notes
 
