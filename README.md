@@ -6,6 +6,8 @@ MaterialsMine App
 # MaterialsMine_Jiahui
 yaml_converter App
 
+**API Docs:** https://materialsmine.org/api/api-docs/
+
 **Python Code Link:** https://github.com/jhyang13/MaterialsMine_YAMLconvert
 
 **App Link:** https://github.com/jhyang13/MaterialsMine_Jiahui/tree/main/services/app/yaml_converter
