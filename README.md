@@ -20,6 +20,8 @@ yaml_converter App
 
 **To convert a XML to YAML (input this url in your browser):** http://localhost:5050/yaml_converter/fetch_xml/<Sample_ID>
 
+**Example Sample ID:** https://qa.materialsmine.org/explorer/xmlvisualizer/66b51f4eb92270bf1381330e?isNewCuration=true
+
 **Example:** http://localhost:5050/yaml_converter/fetch_xml/L7_S5_Hoing_2014
 
 ![image](https://github.com/user-attachments/assets/c2887c0d-d410-4c16-a7cd-bcbb25bcada1)
