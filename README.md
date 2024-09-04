@@ -16,7 +16,7 @@ yaml_converter App
 
 **Stop the app:** npm run dev:stop
 
-**To see status (input this url in your browser):** http://localhost:5050/
+**To check status (input this url in your browser):** http://localhost:5050/
 
 **To convert a XML to YAML (input this url in your browser):** http://localhost:5050/yaml_converter/fetch_xml/<Sample_ID>
 
