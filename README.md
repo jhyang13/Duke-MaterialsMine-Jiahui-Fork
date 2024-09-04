@@ -10,6 +10,19 @@ yaml_converter App
 
 **App Link:** https://github.com/jhyang13/MaterialsMine_Jiahui/tree/main/services/app/yaml_converter
 
+## Usage Notes
+
+**Run the app:** npm run dev:start
+
+**Stop the app:** npm run dev:stop
+
+**To see status (input this url in your browser):** http://localhost:5050/
+
+**To convert a XML to YAML (input this url in your browser):** http://localhost:5050/yaml_converter/fetch_xml/<Sample_ID>
+
+**Example:** http://localhost:5050/yaml_converter/fetch_xml/L7_S5_Hoing_2014
+
+![image](https://github.com/user-attachments/assets/c2887c0d-d410-4c16-a7cd-bcbb25bcada1)
 
 ## :high_brightness: Installation
 Make sure to install [docker](https://docs.docker.com/get-docker/) on your machine first, then `git clone` the repo and run commands below to instantiate or terminate the application.
