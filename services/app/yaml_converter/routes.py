@@ -8,17 +8,24 @@ from ruamel.yaml import YAML
 # Create a Blueprint named 'yaml_converter' with a URL prefix '/yaml_converter'
 yaml_converter = Blueprint("yaml_converter", __name__, url_prefix="/yaml_converter")
 
+
 # Define a route that accepts "XML GET" requests and converts the XML to YAML
-@yaml_converter.route("/fetch_xml/<string:control_id>", methods=["GET"])
+@yaml_converter.route("/<string:control_id>", methods=["GET"])
 def fetch_xml(control_id):
 
-    # Construct the external URL using the provided control_id
-    external_url = f"https://qa.materialsmine.org/api/xml/{control_id}?format=xml"
-    
+    # Check for query parameters to determine which external URL to use
+    # Default to 'qa.materialsmine.org', but allow switching to 'materialsmine.org'
+    use_production = request.args.get('production', 'false').lower() == 'true'
+
+    if use_production:
+        external_url = f"https://materialsmine.org/api/xml/{control_id}?format=xml"
+    else:
+        external_url = f"https://qa.materialsmine.org/api/xml/{control_id}?format=xml"
+
     try:
         # Send a GET request to the external URL
         response = requests.get(external_url)
-        
+
         # Check the status code of the response
         if response.status_code == 200:
             # If the request is successful, parse the XML content
@@ -39,7 +46,7 @@ def fetch_xml(control_id):
         else:
             # For any other status code, return a generic error message
             return jsonify({"message": "Fetch Failed"}), 500
-    
+
     except requests.exceptions.RequestException as e:
         # If there is a network-related error, return an error message with exception details
         return jsonify({"message": f"An error occurred: {str(e)}"}), 500

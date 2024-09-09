@@ -1,39 +1,7 @@
 ![](https://github.com/Duke-MatSci/materialsmine/workflows/CI/badge.svg?branch=develop&event=push)
 
-
 # materialsmine
 MaterialsMine App
-
-
-# MaterialsMine_Jiahui
-yaml_converter App
-
-**API Docs:** https://materialsmine.org/api/api-docs/
-
-**Python Code Link:** https://github.com/jhyang13/MaterialsMine_YAMLconvert
-
-**App Link:** https://github.com/jhyang13/MaterialsMine_Jiahui/tree/main/services/app/yaml_converter
-
-**Sample XML Fetch Code Link:** https://github.com/jhyang13/MaterialsMine_Jiahui/blob/main/services/app/yaml_converter/fetch_routes.py
-
-**YAML Converter Code Link:** https://github.com/jhyang13/MaterialsMine_Jiahui/blob/main/services/app/yaml_converter/routes.py
-
-
-## Usage Notes
-
-**Run the app:** npm run dev:start
-
-**Stop the app:** npm run dev:stop
-
-**To check status (input this url in your browser):** http://localhost:5050/
-
-**To convert a XML to YAML (input this url in your browser):** http://localhost:5050/yaml_converter/fetch_xml/<Sample_ID>
-
-**Example Sample ID:** https://qa.materialsmine.org/explorer/xmlvisualizer/66b51f4eb92270bf1381330e?isNewCuration=true
-
-**Example:** http://localhost:5050/yaml_converter/fetch_xml/L7_S5_Hoing_2014
-
-![image](https://github.com/user-attachments/assets/c2887c0d-d410-4c16-a7cd-bcbb25bcada1)
 
 ## :high_brightness: Installation
 Make sure to install [docker](https://docs.docker.com/get-docker/) on your machine first, then `git clone` the repo and run commands below to instantiate or terminate the application.
